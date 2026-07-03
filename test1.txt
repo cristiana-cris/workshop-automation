@@ -1,4 +1,0 @@
-aaaaa
-fsdfs
-PASSWORD=0
-;;;;
