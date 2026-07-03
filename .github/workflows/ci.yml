@@ -44,7 +44,7 @@ jobs:
       # Runs the resulting binary to ensure it executes successfully
       - name: Run application
         run: |
-          if [ "${{ matrix.os }} = "windows-latest" ]; then 
+          if [ "${{ matrix.os }}" = "windows-latest" ]; then 
             ./c-bye/bye.exe
           else
              ./c-bye/bye
