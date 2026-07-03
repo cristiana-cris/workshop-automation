@@ -34,6 +34,7 @@ jobs:
 
       # Compiles the program exactly as you would locally
       - name: Compile C program
+        shell: bash
         run: |
           if [ "${{ matrix.os }}" = "windows-latest" ]; then 
             gcc c-bye/bye.c -o c-bye/bye.exe
@@ -43,6 +44,7 @@ jobs:
 
       # Runs the resulting binary to ensure it executes successfully
       - name: Run application
+        shell: bash
         run: |
           if [ "${{ matrix.os }}" = "windows-latest" ]; then 
             ./c-bye/bye.exe
