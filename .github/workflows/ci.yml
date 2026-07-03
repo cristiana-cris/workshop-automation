@@ -20,7 +20,7 @@ jobs:
       # Installs the GCC compiler for Ubuntu
       - name: Install GCC (Ubuntu)
         if: matrix.os == 'ubuntu-latest'
-        run: sudo apt-get update && sudo apt-getbut  install -y gcc
+        run: sudo apt-get update && sudo apt-get install -y gcc
 
       # Installs the GCC for macos
       - name: Install GCC (macOS)
@@ -35,7 +35,7 @@ jobs:
       # Compiles the program exactly as you would locally
       - name: Compile C program
         run: |
-          if [ "${{ matrix.os }} = "windows-latest" ]; then 
+          if [ "${{ matrix.os }}" = "windows-latest" ]; then 
             gcc c-bye/bye.c -o c-bye/bye.exe
           else 
             gcc c-bye/bye.c -o c-bye/bye
